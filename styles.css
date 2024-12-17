@@ -1,0 +1,139 @@
+
+/*colors*/
+:root {
+    --main: #444444;
+    --mainshading: #363636;
+    --shading: #b9b9b9;
+    --white: whitesmoke;
+}
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main { 
+    padding: 20px; 
+    /*centers covers, and ensures no repeat for background*/
+    background-image: url('images/spacedna.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+/* Header Styles */
+header {
+    padding: 15px 0;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+/*centers content*/
+
+/*mass stylings*/
+nav ul li a, .dropdown-content, body, header, .dropdown-content a{
+    color: var(--white);
+}
+
+footer, header, .dropdown-content{
+    background-color: var(--main);
+}
+
+nav ul li a:hover, .dropdown-content a:hover {
+    background-color: var(--mainshading);
+}
+/*shadow*/
+.dropdown-content, .dropdown-content a:hover, nav a:hover, .image-grid img:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 15px;
+
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+
+/* Footer Styles */
+footer {
+    color: var(--white);
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/*homepage image grid styling*/
+/* Centers the imagegrid container */ 
+.image-grid-container { 
+    display: flex; 
+    justify-content: center; 
+} 
+/* Image Grid Styles */ 
+.image-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 20px; 
+    width: 100%; 
+    /*Adjust max-width to control the grid's maximum width */ 
+    max-width: 1200px; 
+}  
+.image-grid a { 
+    display: block; 
+} 
+.image-grid img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    transition: transform 0.3s; 
+} 
+.image-grid img:hover { 
+    transform: scale(1.05); 
+}
