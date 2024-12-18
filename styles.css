@@ -8,11 +8,14 @@
 }
 /* Global Styles */
 body {
+    /*background gradient*/
+    background: linear-gradient(to bottom, #000000 70%, #ffe135 30%);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 main { 
     padding: 20px; 
     /*centers covers, and ensures no repeat for background*/
@@ -44,10 +47,10 @@ nav ul li a:hover, .dropdown-content a:hover {
     background-color: var(--mainshading);
 }
 /*shadow*/
-.dropdown-content, .dropdown-content a:hover, nav a:hover, .image-grid img:hover {
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+.dropdown-content, .dropdown-content a:hover, nav a:hover, 
+.image-grid img:hover, .left-container, .right-container {
+    box-shadow: 0px 8px 16px 0px rgba(49, 49, 49, 0.2);
     border-radius: 15px;
-
 }
 
 /* Navigation Styles */
@@ -89,8 +92,12 @@ nav ul li a {
 }
 
 /* Main Content Styles */
-main {
+main, .left-container, .right-container {
     padding: 20px;
+}
+
+.container-wrapper {
+    margin: 20px 4% 20px 4%;
 }
 
 section {
@@ -114,6 +121,25 @@ footer {
     display: flex; 
     justify-content: center; 
 } 
+/*container styles*/
+/*wrapper (big container*/
+.container-wrapper {
+    display: flex;
+    justify-self: space-between;
+    gap: 20px;
+
+}
+/*left/right side columns*/
+.left-container, .right-container {
+    flex: 1;
+}
+.left-container {
+    background-color: #000000;
+}
+.right-container {
+    background-color: #ffe135;
+}
+
 /* Image Grid Styles */ 
 .image-grid { 
     display: grid; 
@@ -126,14 +152,19 @@ footer {
 .image-grid a { 
     display: block; 
 } 
-.image-grid img { 
+.image-grid img, .main-container img { 
     width: 100%; 
     height: auto; 
     display: block; 
-    border: 1px solid #ccc; 
+    border: 2px solid #ccc; 
     border-radius: 8px; 
     transition: transform 0.3s; 
 } 
 .image-grid img:hover { 
     transform: scale(1.05); 
+}
+
+/*unique stylings*/
+body#billportal-page, .container-wrapper, #billportal-page {
+    background-color: aqua;
 }
