@@ -9,8 +9,8 @@
 /* Global Styles */
 body {
     /*background gradient*/
-    background: linear-gradient(to bottom, #000000 70%, #ffe135 30%);
-    font-family: Arial, sans-serif;
+    background-image: url('images/yellow-bricks.jpg');
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,12 +18,12 @@ body {
 
 main { 
     padding: 20px; 
-    /*centers covers, and ensures no repeat for background*/
-    background-image: url('images/spacedna.jpg');
+    position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
 }
+
 /* Header Styles */
 header {
     padding: 15px 0;
@@ -35,8 +35,8 @@ h2 {
 /*centers content*/
 
 /*mass stylings*/
-nav ul li a, .dropdown-content, body, header, .dropdown-content a{
-    color: var(--white);
+nav ul li a, .dropdown-content, body, header, .dropdown-content a, button.home-button {
+    color: var(--shading);
 }
 
 footer, header, .dropdown-content{
@@ -48,7 +48,8 @@ nav ul li a:hover, .dropdown-content a:hover {
 }
 /*shadow*/
 .dropdown-content, .dropdown-content a:hover, nav a:hover, 
-.image-grid img:hover, .left-container, .right-container {
+.image-grid img:hover, .left-container, .right-container-small,
+.button.home-button {
     box-shadow: 0px 8px 16px 0px rgba(49, 49, 49, 0.2);
     border-radius: 15px;
 }
@@ -92,7 +93,7 @@ nav ul li a {
 }
 
 /* Main Content Styles */
-main, .left-container, .right-container {
+main, .left-container, .right-container-small {
     padding: 20px;
 }
 
@@ -104,7 +105,13 @@ section {
     margin-bottom: 20px;
 }
 
-
+/*content styles*/
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 /* Footer Styles */
 footer {
     color: var(--white);
@@ -127,17 +134,19 @@ footer {
     display: flex;
     justify-self: space-between;
     gap: 20px;
-
 }
 /*left/right side columns*/
-.left-container, .right-container {
+.left-container, .right-container-small {
     flex: 1;
 }
 .left-container {
-    background-color: #000000;
+    background-color: var(--main);
 }
-.right-container {
-    background-color: #ffe135;
+
+.right-container-small {
+    background-color: var(--main);
+    height: 150px;
+    align-self: center;
 }
 
 /* Image Grid Styles */ 
@@ -152,7 +161,7 @@ footer {
 .image-grid a { 
     display: block; 
 } 
-.image-grid img, .main-container img { 
+.image-grid img, .container-wrapper img { 
     width: 100%; 
     height: auto; 
     display: block; 
@@ -160,11 +169,29 @@ footer {
     border-radius: 8px; 
     transition: transform 0.3s; 
 } 
-.image-grid img:hover { 
+.image-grid img:hover, .button.home-button:hover { 
     transform: scale(1.05); 
 }
+/*button styles*/
+.linked-button {
+    text-decoration: none;
+    padding-top: 50px;
+}
 
-/*unique stylings*/
-body#billportal-page, .container-wrapper, #billportal-page {
-    background-color: aqua;
+button.home-button {
+    background-color: #756b33;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 500%;
+    height: 50px;
+    border-radius: 20px;
+    font-size: large;
+}
+button.home-button:hover {
+    background-color: #5e5526;
+}
+
+/*unique stylings <-has problems*/
+body#billportal-page, #billportal-page {
+    background-image: url(images/yellow-bricks.jpg);
 }
