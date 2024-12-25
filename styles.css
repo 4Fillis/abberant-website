@@ -107,11 +107,9 @@ section {
 
 /*content styles*/
 .centered-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    margin: 10px 0;
 }
+
 /* Footer Styles */
 footer {
     color: var(--white);
@@ -132,21 +130,27 @@ footer {
 /*wrapper (big container*/
 .container-wrapper {
     display: flex;
-    justify-self: space-between;
-    gap: 20px;
+    flex-wrap: wrap; /*lets flex items wrap*/
+    justify-content: space-between;
+    padding: 20px;
 }
+
 /*left/right side columns*/
 .left-container, .right-container-small {
     flex: 1;
 }
 .left-container {
     background-color: var(--main);
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .right-container-small {
-    background-color: var(--main);
-    height: 150px;
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /* Image Grid Styles */ 
@@ -176,6 +180,7 @@ footer {
 .linked-button {
     text-decoration: none;
     padding-top: 50px;
+    display: inline-block;
 }
 
 button.home-button {
