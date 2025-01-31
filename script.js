@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ];
 
         const styles = [
-            /*rainbow background colors*/
+            //rainbow background colors
             { backgroundColor: 'rgb(178, 176, 34)', color: 'white', borderRadius: '5px' }, // fire brick
             { backgroundColor: 'rgb(222, 224, 94)', color: 'black', borderRadius: '10px' }, // Light orange background
             { backgroundColor: 'rgba(224, 211, 27, 0.89)', color: 'black', borderRadius: '15px' }, // Gold background
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ];
         
         /*shape options -_- rectangle --> circle*/
-        const shapes = [s
+        const shapes = [
             { shape: '', borderRadius: '5px' }, // Default rectangle
             { shape: 'circle', borderRadius: '50%' }, // Circle
             { shape: 'oval', borderRadius: '50%/30%' } // Oval

@@ -138,12 +138,26 @@ footer {
     justify-content: center; 
 } 
 /*container styles*/
-/*wrapper (big container*/
+/*wrapper (big container)*/
 .container-wrapper {
     display: flex;
     flex-wrap: wrap; /*lets flex items wrap*/
     justify-content: space-between;
     padding: 20px;
+}
+
+/*big container for embeded documents*/
+.container{
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+}
+.container-l{
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
 }
 
 /*left/right side columns*/
@@ -187,6 +201,7 @@ footer {
 .image-grid img:hover, .button.home-button:hover { 
     transform: scale(1.05); 
 }
+
 /*button styles*/
 .linked-button {
     text-decoration: none;
@@ -208,6 +223,21 @@ button.home-button:hover {
     background-color: #5e5526;
 }
 
+/* embeded doc styles*/
+iframe {
+    width: 90%;
+    height: 1000px;
+    border: 0;
+    margin-bottom: 50px;
+    margin-left: 50%;
+}
+
+/* links styling*/
+.link {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
 /*buttons on billportal page*/
 .random-button {
     position: absolute;
@@ -219,6 +249,7 @@ button.home-button:hover {
     cursor: pointer;
     font: 40px;
 }
+
 /*different shapes*/
 .circle { 
     border-radius: 50%; 
