@@ -6,6 +6,12 @@
     --shading: #b9b9b9;
     --white: whitesmoke;
 }
+/*importing fonts to use*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 /* Global Styles */
 body {
     /*background gradient*/
@@ -23,6 +29,11 @@ main {
     background-position: center;
     background-repeat: no-repeat; 
 }
+/*page backgrounds*/
+#billportal-page {
+    background: linear-gradient(to right, #beb85faf, #b2b446); /* Gradient from tomato to steelblue */
+}
+  
 
 /* Header Styles */
 header {
@@ -39,7 +50,7 @@ nav ul li a, .dropdown-content, body, header, .dropdown-content a, button.home-b
     color: var(--shading);
 }
 
-footer, header, .dropdown-content{
+footer, header, .dropdown-content, h1{
     background-color: var(--main);
 }
 
@@ -181,6 +192,7 @@ footer {
     text-decoration: none;
     padding-top: 50px;
     display: inline-block;
+    margin-left: -250px;
 }
 
 button.home-button {
@@ -196,7 +208,21 @@ button.home-button:hover {
     background-color: #5e5526;
 }
 
-/*unique stylings <-has problems*/
-body#billportal-page, #billportal-page {
-    background-image: url(images/yellow-bricks.jpg);
+/*buttons on billportal page*/
+.random-button {
+    position: absolute;
+    /*increase padding to increase size*/
+    padding: 45px 60px;
+    background-color: #aaa;
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font: 40px;
+}
+/*different shapes*/
+.circle { 
+    border-radius: 50%; 
+} 
+.oval {
+    border-radius: 50%/25%;
 }
