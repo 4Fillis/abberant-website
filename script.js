@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', function () {
             peekaboo.play();
 
             // Generate 250 buttons
-            for (let i = 0; i < 250; i++) {
+            for (let i = 0; i < 200; i++) {
                 setTimeout(function () {
                     const button = document.createElement('button');
-                    button.innerHTML = 'Click Me';
+                    button.innerHTML = 'I Found You :D!';
                     button.classList.add('random-button');
 
                     // randomise font
