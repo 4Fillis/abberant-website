@@ -27,17 +27,19 @@ document.addEventListener('DOMContentLoaded', function () {
         ];
 
         //new audio object
+        const oh = new Audio('sounds/stanley-oh-my-god.mp3');
+        const well = new Audio('sounds/bill-cipher-well-well.mp3');
         const peekaboo = new Audio('sounds/cipherpeekaboo.mp3');
 
         linkedButton.addEventListener('click', function (event) {
             event.preventDefault(); // Prevents default behavior if button is a link
 
             //play peekaboo audio (once)
-            peekaboo.play();
-            wellwellwell.mp3.play();
+            peekaboo.play()
+
 
             // Generate 250 buttons
-            for (let i = 0; i < 200; i++) {
+            for (let i = 0; i < 80; i++) {
                 setTimeout(function () {
                     const button = document.createElement('button');
                     button.innerHTML = 'I Found You :D!';
@@ -51,6 +53,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     const randomStyle = styles[Math.floor(Math.random() * styles.length)];
                     button.style.backgroundColor = randomStyle.backgroundColor;
                     button.style.color = randomStyle.color;
+                    
+                    //randomised font size between 25 and 40
+                    const randomFontSize = Math.floor(Math.random() * (40 - 25 + 1)) + 25;
+                    button.style.fontSize = randomFontSize + "px"; 
 
                     // randomise shape
                     const randomShape = shapes[Math.floor(Math.random() * shapes.length)];

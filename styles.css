@@ -40,6 +40,10 @@ main {
 #billportal-page {
     background: linear-gradient(to right, #beb85faf, #b2b446); /* Gradient from tomato to steelblue */
 }
+#blackbg {
+    background: black;
+    margin-top: 240px;
+}
   
 
 /* Header Styles */
