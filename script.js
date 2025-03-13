@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             //play peekaboo audio (once)
             peekaboo.play()
+            well.play()
 
 
             // Generate 250 buttons
