@@ -1,1 +1,1 @@
-100% serious website for Abberant world
+100% serious website for Abberant campaign
