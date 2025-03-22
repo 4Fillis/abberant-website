@@ -41,7 +41,7 @@ main {
     background: linear-gradient(to right, #beb85faf, #b2b446); /* Gradient from tomato to steelblue */
 }
 #blackbg {
-    background: black;
+    background: rgb(3, 0, 7);
     margin-top: 240px;
 }
   
