@@ -1,0 +1,345 @@
+
+/*colors*/
+:root {
+    --main: #444444;
+    --mainshading: #363636;
+    --shading: #b9b9b9;
+    --white: whitesmoke;
+}
+/*importing fonts to use*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Global Styles */
+body {
+    /*background gradient*/
+    background-image: url('images/yellow-bricks.jpg');
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+main { 
+    padding: 20px; 
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+/*page backgrounds body tags*/
+#cha{background-image:url( images/dnabackground.jpg);}
+
+
+
+/*page backgrounds*/
+#billportal-page {
+    background: linear-gradient(to right, #beb85faf, #b2b446); /* Gradient from tomato to steelblue */
+}
+#blackbg {
+    background: rgb(3, 0, 7);
+    margin-top: 240px;
+}
+  
+
+/* Header Styles */
+header {
+    padding: 15px 0;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+/*centers content*/
+
+/*mass stylings*/
+nav ul li a, .dropdown-content, body, header, .dropdown-content a, button.home-button {
+    color: var(--shading);
+}
+
+footer, header, .dropdown-content, h1{
+    background-color: var(--main);
+}
+
+nav ul li a:hover, .dropdown-content a:hover {
+    background-color: var(--mainshading);
+}
+/*shadow*/
+.dropdown-content, .dropdown-content a:hover, nav a:hover, 
+.image-grid img:hover, .container-left, .right-container-small,
+.button.home-button, sub:hover {
+    box-shadow: 0px 8px 16px 0px rgba(49, 49, 49, 0.4);
+    border-radius: 15px;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+li:hover > ul {
+    display: block;
+}
+
+/*nav change to transparent on specific pages*/
+#cha .nav {
+    background-color: rgba(0, 200, 0, 0.2);
+}
+
+
+/* Dropdown Styles */
+.dropdown-content {
+    padding: 12px 16px;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+.sub {
+    left: 100%;
+    top: 0;
+    min-width: 130px;
+}
+
+/* Main Content Styles */
+main, .container-left, .right-container-small {
+    padding: 20px;
+}
+
+.container-wrapper {
+    margin: 20px 4% 20px 4%;
+}
+
+.container-middle {
+    height: auto;
+    width: 1200px;
+    /*top, right, bottom, left*/
+    margin-left: 350px;
+    margin-top: 10px;
+    align-content: left;
+
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/*content styles*/
+.centered-content {
+    margin: 10px 0;
+}
+
+/*page title stylings*/
+.centered-title, .subtitle, .centered-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--shading);
+    /*applying a shadow all around text*/
+    text-shadow: 2px 2px 0 black;
+}
+
+.centered-title{
+    font-size: 60px;
+    padding-top: 20px;
+}
+.subtitle{
+    font-size: 40px;
+    padding-top: 5px;
+}
+
+/* Footer Styles */
+footer {
+    color: var(--white);
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/*homepage image grid styling*/
+/* Centers the imagegrid container */ 
+.image-grid-container { 
+    display: flex; 
+    justify-content: center; 
+} 
+/*container styles*/
+/*wrapper (big container)*/
+.container-wrapper {
+    display: flex;
+    flex-wrap: wrap; /*lets flex items wrap*/
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/*big container for embeded documents*/
+.container-right{
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 55%;
+}
+.container-l{
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-long-image{
+    height: 400px;
+    width: 1350px;
+    margin-left: 14%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    /*outline: 2px solid blue;*/
+    /*to make images evenly spaced*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.container-long-image img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+
+/*left/right side columns*/
+.container-left, .right-container-small {
+    flex: 1;
+}
+.container-left {
+    background-color: slateblue;
+    position: absolute;
+    padding: 20px;
+    border-radius: 8px;
+    margin-left: 6%;
+    margin-top: 40px;
+    width: 40%;
+    height: auto;
+    flex: 1;
+}
+
+.right-container-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Image Grid Styles */ 
+.image-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 20px; 
+    width: 100%; 
+    /*Adjust max-width to control the grid's maximum width */ 
+    max-width: 1200px; 
+}  
+.image-grid a { 
+    display: block; 
+} 
+.image-grid img, .container-wrapper img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    border: 2px solid #ccc; 
+    border-radius: 8px; 
+    transition: transform 0.3s; 
+} 
+.image-grid img:hover, .button.home-button:hover { 
+    transform: scale(1.05); 
+}
+
+/*button styles*/
+.linked-button {
+    text-decoration: none;
+    padding-top: 50px;
+    display: inline-block;
+    margin-left: -250px;
+}
+
+button.home-button {
+    background-color: #756b33;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 500%;
+    height: 50px;
+    border-radius: 20px;
+    font-size: large;
+}
+button.home-button:hover {
+    background-color: #5e5526;
+}
+
+/* embeded doc styles*/
+iframe {
+    width: 90%;
+    height: 1000px;
+    border: 0;
+    margin-bottom: 50px;
+    margin-left: 50%;
+    margin-top: 33px;
+}
+
+/* links styling*/
+.link {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/*buttons on billportal page*/
+.random-button {
+    position: absolute;
+    /*increase padding to increase size*/
+    padding: 45px 60px;
+    background-color: #aaa;
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font: 40px;
+}
+
+/*different shapes*/
+.circle { 
+    border-radius: 50%; 
+} 
+.oval {
+    border-radius: 50%/25%;
+}
