@@ -67,10 +67,13 @@ footer .wave#wave1
     z-index: 1;
     opacity: 1;
     bottom: 10px;
+<<<<<<< HEAD
     /*animate links to @keyframes specification in case of other animations
     4s = time, shorter = faster
     linear means = goes horizonally
     infinite = doesn't stop*/
+=======
+>>>>>>> 22ce152bc07839361ee9c0e4fc5c222b22a61185
     animation: animate 4s linear infinite;
 
 }
@@ -90,7 +93,11 @@ footer .wave#wave2
     z-index: 998;
     opacity: 0.5;
     bottom: 15px;
+<<<<<<< HEAD
     animation: animate 2.5s linear infinite;
+=======
+    animation: animate 3s linear infinite;
+>>>>>>> 22ce152bc07839361ee9c0e4fc5c222b22a61185
 
 }
 
@@ -99,12 +106,20 @@ footer .wave#wave4
     z-index: 999;
     opacity: 0.7;
     bottom: 15px;
+<<<<<<< HEAD
     animation: animate 1s linear infinite;
+=======
+    animation: animate 4s linear infinite;
+>>>>>>> 22ce152bc07839361ee9c0e4fc5c222b22a61185
 
 }
 
 
+<<<<<<< HEAD
 /*animation of wave*/
+=======
+/*figure dis outtt*/
+>>>>>>> 22ce152bc07839361ee9c0e4fc5c222b22a61185
 @keyframes animate 
 {
     0%
