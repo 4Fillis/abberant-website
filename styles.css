@@ -11,7 +11,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
+*{
+    box-sizing: border-box;
+}
 /* Global Styles */
 body {
     /*background gradient*/
@@ -21,15 +23,87 @@ body {
     padding: 0;
     box-sizing: border-box;
     margin-bottom: 30px;
-}
 
+    
+    /*for waves*/
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    min-height: 100vh;
+    /*remove background here for bricks*/
+    background: #756b33;
+}
+/*
 main { 
     padding: 20px; 
     position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
+
 }
+*/
+
+footer
+{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: #358391;
+}
+
+footer .wave
+{
+    position: absolute;
+    top: -100px;
+    width: 100%;
+    height: 100px;
+    background: url(images/wave.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1 
+{
+    z-index: 1;
+    opacity: 1;
+    bottom: 10px;
+    animation: 4s linear infinite;
+
+}
+
+/*wave3*/
+footer .wave#wave3
+{
+    z-index: 1;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: 3s linear infinite;
+
+}
+/*figure dis outtt*/
+@keyframes animate 
+{
+    0%
+    {
+        background-position: 1000px;
+    }
+    100%
+    {
+        background-position: 0;
+    }
+}
+
+/* Footer Styles 
+footer {
+    color: var(--white);
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+*/
+
 
 /*page backgrounds body tags*/
 #cha{background-image:url( images/dnabackground.jpg);}
@@ -61,7 +135,7 @@ nav ul li a, .dropdown-content, body, header, .dropdown-content a, button.home-b
     color: var(--shading);
 }
 
-footer, header, .dropdown-content, h1{
+header, .dropdown-content, h1{
     background-color: var(--main);
 }
 
@@ -178,15 +252,6 @@ section {
     padding-top: 5px;
 }
 
-/* Footer Styles */
-footer {
-    color: var(--white);
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-}
 
 /*homepage image grid styling*/
 /* Centers the imagegrid container */ 
