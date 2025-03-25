@@ -117,17 +117,6 @@ footer .wave#wave4
     }
 }
 
-/* Footer Styles 
-footer {
-    color: var(--white);
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-}
-*/
-
 
 /*page backgrounds body tags*/
 #cha{background-image:url( images/dnabackground.jpg);}
@@ -141,7 +130,11 @@ footer {
     background: rgb(3, 0, 7);
     margin-top: 240px;
 }
-  
+
+#crownli {
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.32 5.27-5.47 5.05-2.94-6.71a1 1 0 0 0-1.83 0l-2.94 6.71-5.46-5.05c-.72-.67-1.87 0-1.65.96l3 13a1 1 0 0 0 .97.78h14c.47 0 .87-.32.97-.78l3-13c.22-.96-.93-1.63-1.65-.96Z" fill="%23000"></path></svg>');
+    text-align: left;
+}
 
 /* Header Styles */
 header {
