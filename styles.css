@@ -141,19 +141,21 @@ footer .wave#wave4
 }
 /*tooltips for ecc NPCs page*/
 .tooltip {
-    position: relative;
-    display: inline-block;
+    position: relative !important;
+    display: inline-block !important;
 }
 
 /*cpy paste secton*/
-.tooltip .tooltiptext {
+.tooltip .tooltiptext{
     visibility: hidden;
-    width: 120px;
-    background-color: black;
+    min-width: 350px;
+    width: auto;
+    max-width: 1000px;
+    background-color: #1f1e1c;
     color: #fff;
-    text-align: center;
+    text-align: center !important;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 5px 10px;
     position: absolute;
     z-index: 1;
     bottom: 150%;
