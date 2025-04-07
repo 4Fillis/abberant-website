@@ -1,1 +1,1 @@
-100% serious website for Abberant campaign
+abberant dnd campaign website, currently not syncing
