@@ -1,1 +1,1 @@
-(mostly) 100% serious website
+100% serious website for Abberant campaign
