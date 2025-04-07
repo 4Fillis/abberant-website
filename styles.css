@@ -1,32 +1,43 @@
 
 /*colors*/
+/*make granny smith apple or white lily cookie themed per Hannahs request
+check if change*/
 :root {
-    --main: #444444;
-    --mainshading: #363636;
-    --shading: #b9b9b9;
+    
+    --main: #55342B;
+
+    --mainshading: #55342B;
+    
+    --shading: whitesmoke;
+    --shadingg: #b9b9b9;
     --white: whitesmoke;
+    --wave: #ffe89d;
+    --bgcolor: #e7d69b;
 }
 /*importing fonts to use*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+*{
+    box-sizing: border-box;
+}
 
 /* Global Styles */
 body {
-    /*background gradient*/
-    background-image: url('images/yellow-bricks.jpg');
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     margin-bottom: 30px;
 
-    /*wave code*/
-    display: flex;
-    flex-direction: column;
+    
+    /*for waves*/
     justify-content: flex-end;
+    flex-direction: column;
     min-height: 100vh;
+    
+    background: var(--bgcolor);
 }
 
 main { 
@@ -37,25 +48,116 @@ main {
     background-repeat: no-repeat; 
 }
 
-/*page backgrounds body tags*/
-#cha{background-image:url( images/dnabackground.jpg);}
 
-/*wave animation footer*/
-footer{
+footer
+{
     position: relative;
-    top: -100px;
     width: 100%;
     height: 200px;
-    background: #276874;
+    background: var(--wave);
 }
 
 footer .wave
 {
     position: absolute;
+    top: -100px;
     width: 100%;
     height: 100px;
+    background: url(images/wave_y.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1 
+{
+    z-index: 1;
+    opacity: 1;
+    bottom: 10px;
+    /*animate links to @keyframes specification in case of other animations
+    4s = time, shorter = faster
+    linear means = goes horizonally
+    infinite = doesn't stop*/
+    animation: animate 4s linear infinite;
 
 }
+
+/*wave3*/
+footer .wave#wave3
+{
+    z-index: 998;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animate 3s linear infinite;
+
+}
+
+footer .wave#wave2
+{
+    z-index: 998;
+    opacity: 0.5;
+    bottom: 15px;
+    animation: animate 2.5s linear infinite;
+
+}
+
+footer .wave#wave4
+{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 15px;
+    animation: animate 1s linear infinite;
+
+}
+
+/*animation of home page wave*/
+@keyframes animate 
+{
+    0%
+    {
+        background-position: 1000px;
+    }
+    100%
+    {
+        background-position: 0;
+    }
+}
+/*mask on ecc NPC's page*/
+.mask1 {
+    -webkit-mask-image: url(images/LORE_text_blk.png);
+    mask-image: url(images/LORE_text_blk.png);
+    mask-clip: 3;
+    mask-repeat: repeat-y;
+
+}
+
+/*slide in overlay
+.ofb-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.ofbt {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+above is not working so shall remain as comment until revisited*/
+/*page backgrounds body tags*/
+
+#cha{background-image:url( images/dnabackground.jpg);}
+
 
 /*page backgrounds*/
 #billportal-page {
@@ -65,7 +167,54 @@ footer .wave
     background: rgb(3, 0, 7);
     margin-top: 240px;
 }
+
+/*crown icon bullet list*/
+.crownli {
+    list-style-position: inside !important;
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.32 5.27-5.47 5.05-2.94-6.71a1 1 0 0 0-1.83 0l-2.94 6.71-5.46-5.05c-.72-.67-1.87 0-1.65.96l3 13a1 1 0 0 0 .97.78h14c.47 0 .87-.32.97-.78l3-13c.22-.96-.93-1.63-1.65-.96Z" fill="%23000"></path></svg>');
+    text-align: left !important;
+    font-size: 1.5rem !important;
+    text-shadow: none !important;
+}
+/*tooltips for ecc NPCs page*/
+.tooltip {
+    position: relative !important;
+    display: inline-block !important;
+}
+
+/*cpy paste secton*/
+.tooltip .tooltiptext{
+    visibility: hidden;
+    min-width: 350px;
+    width: auto;
+    max-width: 1000px;
+    background-color: #1f1e1c;
+    color: #fff;
+    text-align: center !important;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
   
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
 
 /* Header Styles */
 header {
@@ -82,7 +231,7 @@ nav ul li a, .dropdown-content, body, header, .dropdown-content a, button.home-b
     color: var(--shading);
 }
 
-footer, header, .dropdown-content, h1{
+header, .dropdown-content, h1{
     background-color: var(--main);
 }
 
@@ -97,12 +246,19 @@ nav ul li a:hover, .dropdown-content a:hover {
     border-radius: 15px;
 }
 
+/*display flex*/
+nav ul, .centered-title, .subtitle, .centered-text,
+.image-grid-container, .container-wrapper, .container-LORE,
+.container-right, .container-l, .container-long-image,
+.right-container-small, body, .mask1{
+    display: flex;
+}
+
 /* Navigation Styles */
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
     justify-content: center;
 }
 
@@ -126,6 +282,10 @@ li:hover > ul {
     background-color: rgba(0, 200, 0, 0.2);
 }
 
+/*moves thing up*/
+#bucket {
+    margin-top: -1000px;
+}
 
 /* Dropdown Styles */
 .dropdown-content {
@@ -182,7 +342,7 @@ section {
 
 /*page title stylings*/
 .centered-title, .subtitle, .centered-text {
-    display: flex;
+
     justify-content: center;
     text-align: center;
     color: var(--shading);
@@ -199,41 +359,35 @@ section {
     padding-top: 5px;
 }
 
-/* Footer Styles */
-footer {
-    color: var(--white);
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-}
 
 /*homepage image grid styling*/
 /* Centers the imagegrid container */ 
 .image-grid-container { 
-    display: flex; 
     justify-content: center; 
+    margin-bottom: 50px;
 } 
 /*container styles*/
 /*wrapper (big container)*/
 .container-wrapper {
-    display: flex;
     flex-wrap: wrap; /*lets flex items wrap*/
     justify-content: space-between;
     padding: 20px;
 }
+/*container a bit right for LORE pages*/
+.container-LORE {
+    text-align: left;
+    /*top right bottom left*/
+    margin: -500px 50px 50px 350px;
+}
 
 /*big container for embeded documents*/
 .container-right{
-    display: flex;
     flex-direction: center;
     justify-content: center;
     align-items: center;
     margin-left: 55%;
 }
 .container-l{
-    display: flex;
     flex-direction: center;
     justify-content: center;
     align-items: center;
@@ -248,7 +402,7 @@ footer {
     border-radius: 20px;
     /*outline: 2px solid blue;*/
     /*to make images evenly spaced*/
-    display: flex;
+
     justify-content: space-between;
     align-items: center;
 
@@ -277,7 +431,6 @@ footer {
 }
 
 .right-container-small {
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
