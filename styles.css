@@ -376,8 +376,8 @@ section {
 /*container a bit right for LORE pages*/
 .container-LORE {
     text-align: left;
-    /*top right bottom left*/
-    margin: -500px 50px 50px 350px;
+    /*       top  right bottom left*/
+    margin: -500px 50px 192px 350px;
 }
 
 /*big container for embeded documents*/
