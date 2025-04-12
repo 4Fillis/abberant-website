@@ -4,10 +4,11 @@
 check if change*/
 :root {
     
-    --main: #55342B;
-    --porple: #6a118d;
+    --mainn: #55342B;
+    --main: #e05934;
 
-    --mainshading: #55342B;
+    --mainshadiing: #55342B;
+    --mainshading: #24a182;
     
     --shading: whitesmoke;
     --shadingg: #b9b9b9;
@@ -21,6 +22,12 @@ check if change*/
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 *{
+    box-sizing: border-box;
+}
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
