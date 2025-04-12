@@ -171,8 +171,8 @@ footer .wave#wave4
     min-width: 350px;
     width: auto;
     max-width: 1000px;
-    background-color: #1f1e1c;
-    color: #fff;
+    background-color: var(--c);
+    color: var(--white);
     text-align: center !important;
     border-radius: 6px;
     padding: 5px 10px;
@@ -298,6 +298,18 @@ li:hover > ul {
     min-width: 130px;
 }
 
+/*dropdown undeveloped areas tape*/
+
+#tape{
+    background-image: url(images/cationtape-tbd\ \(1\).png);
+    background-color: var(--white);
+    background-repeat: no-repeat;
+    height: auto;
+    object-fit: cover;
+}
+#tape img {
+    width: 500px;
+}
 /* Main Content Styles */
 main, .container-left, .right-container-small {
     padding: 20px;
@@ -463,9 +475,6 @@ button.home-button {
     height: 50px;
     border-radius: 20px;
     font-size: large;
-}
-button.home-button:hover {
-    background-color: #5e5526;
 }
 
 /* embeded doc styles*/
