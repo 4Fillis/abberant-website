@@ -3,18 +3,16 @@
 /*make granny smith apple or white lily cookie themed per Hannahs request
 check if change*/
 :root {
-    
-    --mainn: #55342B;
-    --main: #e05934;
-
-    --mainshadiing: #55342B;
-    --mainshading: #24a182;
-    
-    --shading: whitesmoke;
-    --shadingg: #b9b9b9;
     --white: whitesmoke;
-    --wave: #ffe89d;
-    --bgcolor: #e7d69b;
+    /*new color scheme*/
+    --wave: #dec1d8;
+    /* color scheme 2*/
+    --main: #541553;
+    --mainshading: #722548;
+    --c: #221932;
+    --bgcolor: #0F0616; /*purple black*/
+    --shading: #775E88;
+    --f: #9882B9;
 }
 /*importing fonts to use*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); 
@@ -26,9 +24,8 @@ check if change*/
 }
 /* Reset default margins and padding */
 * {
-    margin: 0;
+    margin: 50;
     padding: 0;
-    box-sizing: border-box;
 }
 
 /* Global Styles */
@@ -63,6 +60,7 @@ footer
     width: 100%;
     height: 200px;
     background: var(--wave);
+    padding-bottom: 50px;
 }
 
 footer .wave
@@ -71,8 +69,12 @@ footer .wave
     top: -100px;
     width: 100%;
     height: 100px;
-    background: url(images/wave_y.png);
+    background: url(images/wave.png);
     background-size: 1000px 100px;
+}
+
+.wave {
+    filter: invert(91%) sepia(10%) saturate(726%) hue-rotate(278deg) brightness(90%) contrast(93%);
 }
 
 footer .wave#wave1 
@@ -134,36 +136,9 @@ footer .wave#wave4
     mask-image: url(images/LORE_text_blk.png);
     mask-clip: 3;
     mask-repeat: repeat-y;
-
 }
 
-/*slide in overlay
-.ofb-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #008CBA;
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    transition: .5s ease;
-}
-
-.ofbt {
-    white-space: nowrap; 
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-above is not working so shall remain as comment until revisited*/
 /*page backgrounds body tags*/
-
 #cha{background-image:url( images/dnabackground.jpg);}
 
 
@@ -225,9 +200,9 @@ above is not working so shall remain as comment until revisited*/
 
 
 /* Header Styles */
-header {
-    padding: 15px 0;
-    text-align: center;
+h1 {
+    font-size: xx-large;
+    padding: 0;
 }
 h2 {
     text-align: center;
@@ -235,11 +210,11 @@ h2 {
 /*centers content*/
 
 /*mass stylings*/
-nav ul li a, .dropdown-content, body, header, .dropdown-content a, button.home-button {
+nav ul li a, .dropdown-content, body, .dropdown-content a, button.home-button {
     color: var(--shading);
 }
 
-header, .dropdown-content, h1{
+nav, .dropdown-content, h1{
     background-color: var(--main);
 }
 
@@ -263,10 +238,18 @@ nav ul, .centered-title, .subtitle, .centered-text,
 }
 
 /* Navigation Styles */
+/* Example of a fixed navigation bar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 9999;
+}
+
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     justify-content: center;
 }
 
@@ -283,11 +266,6 @@ nav ul li a {
 
 li:hover > ul {
     display: block;
-}
-
-/*nav change to transparent on specific pages*/
-#cha .nav {
-    background-color: rgba(0, 200, 0, 0.2);
 }
 
 /*moves thing up*/
