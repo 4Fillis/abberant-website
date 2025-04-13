@@ -81,7 +81,6 @@ footer .wave#wave1
 {
     z-index: 1;
     opacity: 1;
-    bottom: 10px;
     /*animate links to @keyframes specification in case of other animations
     4s = time, shorter = faster
     linear means = goes horizonally
@@ -118,7 +117,7 @@ footer .wave#wave4
 
 }
 
-/*animation of home page wave*/
+/*moves wave from one side to the other & repeat*/
 @keyframes animate 
 {
     0%
@@ -130,16 +129,18 @@ footer .wave#wave4
         background-position: 0;
     }
 }
-/*mask on ecc NPC's page*/
-.mask1 {
+/*LORE word mask on ecc page*/
+.LORE-mask {
     -webkit-mask-image: url(images/LORE_text_blk.png);
     mask-image: url(images/LORE_text_blk.png);
+    mask-border-mode:luminance;
     mask-clip: 3;
     mask-repeat: repeat-y;
+    margin-top: 20px;
 }
 
 /*page backgrounds body tags*/
-#cha{background-image:url( images/dnabackground.jpg);}
+#cha{background-image:url(images/purple-images/dna-curve-vertical.jpg);}
 
 
 /*page backgrounds*/
@@ -151,10 +152,12 @@ footer .wave#wave4
     margin-top: 240px;
 }
 
+
 /*crown icon bullet list*/
 .crownli {
     list-style-position: inside !important;
-    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.32 5.27-5.47 5.05-2.94-6.71a1 1 0 0 0-1.83 0l-2.94 6.71-5.46-5.05c-.72-.67-1.87 0-1.65.96l3 13a1 1 0 0 0 .97.78h14c.47 0 .87-.32.97-.78l3-13c.22-.96-.93-1.63-1.65-.96Z" fill="%23000"></path></svg>');
+    /*list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.32 5.27-5.47 5.05-2.94-6.71a1 1 0 0 0-1.83 0l-2.94 6.71-5.46-5.05c-.72-.67-1.87 0-1.65.96l3 13a1 1 0 0 0 .97.78h14c.47 0 .87-.32.97-.78l3-13c.22-.96-.93-1.63-1.65-.96Z" fill="%23000"></path></svg>');
+    */
     text-align: left !important;
     font-size: 1.5rem !important;
     text-shadow: none !important;
@@ -172,7 +175,6 @@ footer .wave#wave4
     width: auto;
     max-width: 1000px;
     background-color: var(--c);
-    color: var(--white);
     text-align: center !important;
     border-radius: 6px;
     padding: 5px 10px;
@@ -204,11 +206,14 @@ h1 {
     font-size: xx-large;
     padding: 0;
 }
+/*centers content*/
 h2 {
     text-align: center;
 }
-/*centers content*/
-
+/*text stylig*/
+p {
+    font-size: 1.2rem;
+}
 /*mass stylings*/
 nav ul li a, .dropdown-content, body, .dropdown-content a, button.home-button {
     color: var(--shading);
@@ -233,7 +238,7 @@ nav ul li a:hover, .dropdown-content a:hover {
 nav ul, .centered-title, .subtitle, .centered-text,
 .image-grid-container, .container-wrapper, .container-LORE,
 .container-right, .container-l, .container-long-image,
-.right-container-small, body, .mask1{
+.right-container-small, body, .LORE-mask{
     display: flex;
 }
 
@@ -316,7 +321,8 @@ main, .container-left, .right-container-small {
 }
 
 .container-wrapper {
-    margin: 20px 4% 20px 4%;
+    /*top, right, bottom, left*/
+    margin: 20px 20px 0px 20px;
 }
 
 .container-middle {
@@ -375,7 +381,7 @@ section {
 .container-LORE {
     text-align: left;
     /*       top  right bottom left*/
-    margin: -500px 50px 192px 350px;
+    margin: -590px 50px 80px 350px;
 }
 
 /*big container for embeded documents*/
@@ -408,6 +414,7 @@ section {
 .container-long-image img{
     max-width: 100%;
     max-height: 100%;
+    min-width: 300px;
     border-radius: 20px;
     opacity: 0.9;
 }
